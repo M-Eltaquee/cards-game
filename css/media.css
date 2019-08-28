@@ -1,16 +1,21 @@
 /* Media */
-@media only screen and (max-width: 991px) {
-    #hr .timer div{
-        font-size: 2rem;
-    }
-    #hm h1{
-        font-size: 2rem;
-    }
-}
 
+@media only screen and (max-width: 992px) {
+    section #card_board .card_holder{
+        height: 150px;
+        padding: 10px 60px;    
+}
+}
 @media only screen and (max-width: 767px) {
     section{
-        margin-block-start: 42vh;
+        margin-top: 230px;
+    }
+    section #card_board .card_holder{
+        height: 150px;
+        padding: 20px;   
+    }
+    section #card_board .card_holder .cardd div{
+    line-height: 100px;
     }
     #hl{
         margin-bottom: 20px;
@@ -32,12 +37,17 @@
     section{
         margin-block-start: 42vh;
     }
-    section #card_board .card_holder {
-        padding: 10px 50px !important;
-    }
+
 }
 @media only screen and (max-width: 313px) {
     #hm h1{
         font-size: 1rem;
     }
+    .congrats h1{
+        font-size: 30px;
+    }
+    section #card_board .card_holder .cardd div{
+        line-height: 100px;
+        font-size: 1rem;
+        }
 }

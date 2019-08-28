@@ -42,8 +42,8 @@ $(document).ready(function(){
 var card_board = $('#card_board')
 for(var i= 0; i < numbers.length; i++){
     var card =  `
-    <div class="card_holder bg-dark col-lg-3 col-md-4 col-sm-6 rounded">
-        <div class="card" value=${numbers[i]}>
+    <div class="card_holder bg-dark col-4 rounded">
+        <div class="cardd" value=${numbers[i]}>
             <div class="back"></div>
             <div class="front">${numbers[i]}</div>
         </div>
@@ -66,8 +66,8 @@ start= function(){
         s++
         if(s<10){
             s = '0'+s
-        }else if(s>59){
-            return s = 0
+        }else if(s == 60){
+            s = 0
         }
         $('.timer div:last').text(s)
     },1000)
@@ -78,8 +78,8 @@ start= function(){
 
         if(m<10){
             m = '0'+m
-        }else if(m>59){
-            return m =0
+        }else if(m > 59){
+            m =0
         }
         $('.timer div:first').text(m)
     },60000)
@@ -89,7 +89,7 @@ start= function(){
                             // Third: Game Logic
                             
                                 //on each click on card
-$('.card').on('click', function()
+$('.cardd').on('click', function()
 {
     //open the card
     if( !$(this).hasClass('rotated')){
@@ -102,7 +102,7 @@ $('.card').on('click', function()
         
     }
         //if two cards are open -- game logic
-        if( $('.card').is($('.rotated:eq(1)')) ){
+        if( $('.cardd').is($('.rotated:eq(1)')) ){
 
             //if two cards have same value
             setTimeout(function(){
@@ -112,7 +112,7 @@ $('.card').on('click', function()
                         $('.rotated:eq(0), .rotated:eq(1)').removeClass('rotated').addClass('hidden');
                        
                         //all cards matched
-                        if( $('.card').is($(`.hidden:eq(${parseInt(level)-1})`)) ){
+                        if( $('.cardd').is($(`.hidden:eq(${parseInt(level)-1})`)) ){
                             
                             clearInterval(secs);
                             clearInterval(mins);
@@ -130,8 +130,8 @@ $('.card').on('click', function()
     });
                         // reset button function 
 $('.reset').on('click', function(){
-    $('.card').removeClass('hidden');
-    $('.card').removeClass('rotated') ;
+    $('.cardd').removeClass('hidden');
+    $('.cardd').removeClass('rotated') ;
     $('#start button').fadeIn();
     $('.overlay').slideDown().text('');
     $('#hl p').removeClass('mt-4').addClass('mt-2')
@@ -141,6 +141,8 @@ $('.reset').on('click', function(){
     if(mins){
         clearInterval(mins);
     }
+    s = 0;
+    m = 0;
     $('.timer div:first').text('00')
     $('.timer div:last').text('00')
     $('#win').hide().removeClass('congrats')
