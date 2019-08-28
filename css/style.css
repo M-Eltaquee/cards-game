@@ -1,0 +1,213 @@
+/*------ statr global styling --------- */
+/* fonts */
+@font-face{
+    font-family: font-reg;
+    src: url(../fonts/PT_Sans-Web-Regular.ttf)
+}
+
+@font-face{
+    font-family: font-italicBold;
+    src: url(../fonts/PT_Sans-Web-BoldItalic.ttf);
+}
+
+
+/* colors*/
+:root{
+    --first-color: #FFF7F5;
+    --second-color:  #00A5A8;
+    --third-color:  #DA5663;
+    --fourth-color: #B1CCEA;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #FF416C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       
+}
+header, footer{
+    padding-top: 10px;
+}
+section{
+    padding-top: 20px;
+}
+                        /* ------ end global styling ---------*/
+
+                        /* ----- start header styling ------- */
+
+#hl, #hr{   
+    font-family: cursive;
+}
+#lp{
+    font-size: 1.8rem
+}
+#hl button, footer .reset{
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-weight: 600;
+}
+
+#hm h1{ 
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: cursive;
+    color: var(--second-color);
+    line-height: 15vh;
+}
+                        /* ------ end header styling ---------*/
+
+                        /* ----- start section styling ------- */
+/* card board */
+section .container{
+    background-color: var(--first-color);
+}
+
+#card_board{
+    position: relative;
+} 
+/* card board overlay */
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 5;
+}
+.hani{
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../imgs/hani.jpg);
+}
+#card_board > .overlay::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.137)
+}
+
+/* card holder style*/
+section #card_board .card_holder{
+    height: 150px;
+    padding: 10px 30px !important;
+    
+}
+
+/* card style */
+section #card_board .card_holder .card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: all linear 0.5s;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
+    transform-style: preserve-3d;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+}
+
+/* card back and front style */
+    section #card_board .card_holder .card div{
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        line-height: 130px;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-weight: 900;
+        font-family:'Anton', sans-serif;
+        color: #FFF7F5;
+        border-radius: 15%;
+        -webkit-border-radius: 15%;
+        -moz-border-radius: 15%;
+        -ms-border-radius: 15%;
+        -o-border-radius: 15%;
+
+}
+    section #card_board .card_holder .card .back{
+        position: absolute;
+        background: var(--third-color);
+        z-index: 3;
+        border: 2px solid var(--second-color);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: rotateX(0deg)    ;
+        -webkit-transform: rotateX(0deg)    ;
+        -moz-transform: rotateX(0deg)    ;
+        -ms-transform: rotateX(0deg)    ;
+        -o-transform: rotateX(0deg)    ;
+}
+    section #card_board .card_holder .card .front{
+        position: absolute;
+        background: var(--second-color);
+        z-index: 2;
+        border: 2px solid var(--third-color);
+        transform: rotatey(180deg);
+        -webkit-transform: rotatey(180deg);
+        -moz-transform: rotatey(180deg);
+        -o-transform: rotatey(180deg);
+        -ms-transform: rotatey(180deg);
+}
+                        /* ----- end section styling ------- */
+
+                        /* ----- start footer styling ------- */
+.reset{
+    position: relative;
+    z-index:11;
+}
+                        /* ----- end footer styling ------- */
+    
+/* class rotated & hidden style --- will be used in game logice---- */
+.rotated{
+    transform: rotateY(180deg);
+    -webkit-transform:;
+    -moz-transform:;
+    -ms-transform:;
+    -o-transform:;
+}
+.hidden{
+    opacity: 0;
+}
+/* in case of winning  */
+.congrats{
+    animation: flash 5s linear infinite;
+    height: 100vh;
+    z-index:10;
+    position: fixed;
+    height: 100%;
+    -webkit-animation: flash 3s linear infinite;
+    text-align: center;
+    top: 45vh;
+    font-size: 5rem;
+    z-index: 10;
+    color: white;
+}
+.congrats h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#f11712, #0099f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  
+  
+  
+  

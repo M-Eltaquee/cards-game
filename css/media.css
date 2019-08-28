@@ -1,0 +1,43 @@
+/* Media */
+@media only screen and (max-width: 991px) {
+    #hr .timer div{
+        font-size: 2rem;
+    }
+    #hm h1{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    section{
+        margin-block-start: 42vh;
+    }
+    #hl{
+        margin-bottom: 20px;
+    }
+    #h1 p{
+        margin-top: 20px !important;
+    }
+    #hl p select{
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+    }
+    #hr .timer div{
+        font-size: 2.5rem;
+    }
+    
+}
+@media only screen and (max-width: 575px) {
+    section{
+        margin-block-start: 42vh;
+    }
+    section #card_board .card_holder {
+        padding: 10px 50px !important;
+    }
+}
+@media only screen and (max-width: 313px) {
+    #hm h1{
+        font-size: 1rem;
+    }
+}

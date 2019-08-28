@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Match Cards</title>
+    <link rel="stylesheet" href="libraries/bootstrap/mdbootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+</head>
+<body>
+    <div id="win" class="overlay" style="display: none">
+        <h1>
+                congratulations
+        </h1>
+    </div>
+                               <!----------- start header ------------->
+<header style="height: 20vh;">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+                                <!-- header-left -->
+            <div id="hl" class="col-md-3 text-center h-100">
+                <p class="mt-2">Choose Difficulty Level
+                        <select class="d-block" name="selLevel" id="selLevel" style="width:50px; margin:0 auto">
+                            <option value="0">---</option>
+                            <option value="8"> 8</option>
+                            <option value="12">12</option>
+                            <option value="16">16</option>
+                            <option value="20">20</option>
+                            <option value="24">24</option>
+                        </select>
+                </p>
+                <div id="start">
+                    <button onclick="start()" class="btn">Start Game</button>
+                </div>
+            </div>
+                                <!-- header middle -->
+            <div id="hm" class="col-md-6 text-center" style="height:100%;">
+                <h1 class="text-pop-up-bottom font-effect-shadow-multiple">Hani & Caramel</h1>
+            </div>
+                                <!-- header-right -->
+            <div id="hr" class="col-md-3 text-center h-100">
+                <div class="timer pt-3 row justify-content-center h-100">
+                    <div class="bg-dark col-4 h-75 text-light h1 pt-2 mx-2 rounded-circle border border-light">00</div>
+                    <div class="bg-dark col-4 h-75 text-light h1 pt-2 mx-2 rounded-circle rounded-light">00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+                        <!----------- end header ------------->
+
+                        <!----------- start section ------------->
+<section>
+    <div class="container" style="width: 60vw;">
+        <div id="card_board" class="row justify-content-center align-items-center h-100">
+          <div class="overlay hani">
+            
+        </div>  
+        </div>
+    </div>
+</section>
+                        <!----------- end section ------------->
+
+                        <!----------- start footer ------------->
+<footer style="height: 20vh;" class="text-center">
+                                <!-- reset button -->
+    <button class="btn btn-primary btn-lg mt-4 reset">Reset</button>
+</footer>
+                        <!----------- start footer ------------->
+
+<script src="libraries/jquery/jquery.js"></script>
+<script src="libraries/bootstrap/mdbootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
